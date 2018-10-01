@@ -19,18 +19,18 @@ app.start = (port) => {
 
   } else {
     app.listen(port, err => {
-      if (err) { throw err; }
+      if (err) { throw err; };
       isRunning = true;
       console.log(`Server running on port ${port}`);
     });
-  }
+  };
 };
 
 app.stop = () => {
   app.close(() => {
     console.log(`Server has been shut down`);
     isRunning = false;
-  });
-};
+  })
+}
 
 module.exports = app;
